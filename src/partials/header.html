@@ -1,19 +1,62 @@
 <header class="header">
   <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
+    <div class="header-wrap">
+      <div class="header-nav-wrap">
+        <a href="./index.html" class="header-logo-box">
+          <svg class="header-logo">
+            <use href="./img/icons.svg#icon-popcorn"></use>
+          </svg>
+          <span class="header-logo-text">Cinemania</span>
+        </a>
+        <nav class="header-menu">
+          <ul class="header-nav">
+            <li><a class="header-nav-list" href="./index.html">Home</a></li>
+            <li>
+              <a class="header-nav-list" href="./catalog.html">Catalog</a>
+            </li>
+            <li>
+              <a class="header-nav-list" href="./library.html">My library</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="menu-btn" id="menu-btn" type="button">Menu</button>
+      </div>
+      <!-- ============================ SWITCHER ============================  -->
+      <div class="theme-switcher">
+        <div class="toggle-icon">
+          <svg class="moon-icon">
+            <use href="./img/icons.svg#icon-moon"></use>
+          </svg>
+          <svg class="sun-icon">
+            <use href="./img/icons.svg#icon-sun"></use>
+          </svg>
+        </div>
+        <svg class="ball-icon">
+          <use href="./img/icons.svg#icon-ball"></use>
         </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ MOBILE MENU ============================  -->
+
+<div class="mobile-menu-backdrop" id="mobile-menu-backdrop"></div>
+<div class="mobile-menu-modal" id="mobile-menu-modal">
+  <div class="modal-content">
+    <a href="./index.html" class="modal-logo">
+      <svg class="logo">
+        <use href="./img/icons.svg#icon-popcorn"></use>
+      </svg>
+    </a>
+    <nav class="modal-nav">
+      <ul class="modal-nav-list">
+        <li><a class="mobile-nav-list" href="./index.html">Home</a></li>
+        <li><a class="mobile-nav-list" href="./catalog.html">Catalog</a></li>
+        <li>
+          <a class="mobile-nav-list" href="./library.html">My library</a>
         </li>
       </ul>
     </nav>
   </div>
-</header>
+</div>

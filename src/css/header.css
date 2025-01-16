@@ -1,44 +1,312 @@
 .header {
-  padding: 20px 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
-.nav {
+
+.header-wrap {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
-.nav-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.nav-list {
+
+.header-logo-box {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
 }
-.nav-link {
-  position: relative;
-  display: block;
+
+.header-nav-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  width: 32px;
+  height: 32px;
+}
+
+.header-logo-text {
+  display: none;
+}
+
+.menu-btn {
+  font-family: var(--font-roboto);
   font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: 200ms ease-in;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 92px;
 }
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
+
+.header-nav {
+  display: none;
 }
-.nav-link::after {
-  content: '';
+
+.header-nav-list {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .header-logo-box {
+    gap: 8px;
+  }
+
+  .header-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .header-logo-text {
+    margin-left: 8px;
+    display: block;
+    font-size: 24px;
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 40px;
+    margin-left: 59px;
+  }
+
+  .header-nav-list {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    font-family: var(--font-roboto);
+    text-transform: uppercase;
+    transition: color 400ms;
+  }
+
+  /* .header-nav-list:hover,
+  .header-nav-list:focus {
+    color: var(--orange-color);
+  }
+
+  .header-nav-list.active {
+    color: var(--orange-color);
+  } */
+
+  .menu-btn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header-nav {
+    margin-left: 307px;
+  }
+}
+
+/* ============================ SWITCHER ============================ */
+.theme-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 44px;
+  height: 18px;
+  padding: 2px;
+  border-radius: 50px;
+  background: var(--gradient-button-2);
+}
+
+.ball-icon {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
-  width: 110%;
-  height: 4px;
-  border-radius: 4px;
-  transform-origin: center;
-  animation: stretch 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms both;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(180deg);
 }
-.nav-link.active::after {
-  background: #747bff;
+
+.toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+html[data-theme='light'] .ball-icon {
+  transform: translateX(25px) rotate(360deg);
+}
+
+.sun-icon,
+.moon-icon {
+  width: 10px;
+  height: 10px;
+  fill: var(--white-color);
+}
+
+@media screen and (min-width: 768px) {
+  .theme-switcher {
+    width: 60px;
+    height: 24px;
+    padding: 3px;
+  }
+
+  .ball-icon {
+    width: 18px;
+    height: 18px;
+    left: 3px;
+  }
+
+  .sun-icon,
+  .moon-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  html[data-theme='light'] .ball-icon {
+    transform: translateX(36px) rotate(360deg);
+  }
+}
+
+/* ============================ MOBILE MENU ============================ */
+.mobile-menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 999;
+  display: none;
+}
+
+.mobile-menu-modal {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 65%;
+  height: 100%;
+  z-index: 1000;
+  transition: left 0.3s ease-in;
+}
+
+.mobile-menu-modal.open {
+  left: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.modal-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 428px;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  overflow-y: auto;
+  border-radius: 0 8px 8px 0;
+}
+
+.modal-logo {
+  display: block;
+  margin-bottom: 44px;
+}
+
+.logo {
+  display: flex;
+  width: 32px;
+  height: 32px;
+}
+
+.modal-nav {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-nav-list {
+  margin-bottom: 24px;
+  font-family: var(--font-roboto);
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: left;
+  transition: color 400ms;
+}
+
+.mobile-nav-list:hover,
+.mobile-nav-list:focus {
+  color: var(--orange-color);
+}
+
+.modal-nav li {
+  margin-right: 20px;
+}
+
+.modal-nav a {
+  display: block;
+
+  transition: color 0.3s;
+}
+
+.mobile-nav-list.active {
+  color: #f87719;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-backdrop,
+  .mobile-menu-modal {
+    display: none;
+  }
+
+  .mobile-menu-backdrop {
+    background-color: transparent;
+  }
+}
+
+/* Styles for light theme */
+html[data-theme='light'] .header-nav-list,
+html[data-theme='light'] .menu-btn {
+  color: var(--grey-white-theme-color);
+}
+
+html[data-theme='light'] .header-nav-list:hover,
+html[data-theme='light'] .header-nav-list:focus {
+  color: var(--orange-color);
+}
+
+html[data-theme='light'] .header-logo-text {
+  color: var(--black-secondary-color);
+}
+
+html[data-theme='light'] .mobile-menu-modal {
+  background-color: var(--secondary-text);
+}
+
+html[data-theme='light'] .header-nav-list.active,
+html[data-theme='light'] .menu-btn:hover,
+html[data-theme='light'] .menu-btn:focus {
+  color: var(--orange-color);
+}
+
+/* Styles for dark theme */
+html[data-theme='dark'] .header-nav-list,
+html[data-theme='dark'] .menu-btn {
+  color: var(--grey-color);
+}
+
+html[data-theme='dark'] .header-nav-list:hover,
+html[data-theme='dark'] .header-nav-list:focus {
+  color: var(--orange-color);
+}
+
+html[data-theme='dark'] .header-nav-list.active,
+html[data-theme='dark'] .menu-btn:hover,
+html[data-theme='dark'] .menu-btn:focus {
+  color: var(--orange-color);
+}
+
+html[data-theme='dark'] .mobile-menu-modal {
+  background-color: #171717;
 }

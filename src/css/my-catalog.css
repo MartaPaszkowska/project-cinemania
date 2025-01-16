@@ -1,0 +1,406 @@
+html[data-theme='light'] .input-text,
+.year-select {
+  background-color: var(--white-color);
+  color: var(--grey-color);
+  border: solid 1px var(--grey-color);
+}
+
+html[data-theme='light'] .year-select {
+  background-color: var(--white-color);
+  color: var(--grey-color);
+  border: solid 1px var(--grey-color);
+}
+
+html[data-theme='light'] .page-number-button {
+  background-color: var(--white-color);
+  color: var(--grey-color);
+  border: solid 1px var(--grey-color);
+}
+
+.stars {
+  display: inline-flex;
+  align-items: center;
+}
+
+.star {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.catalog-movie-picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.catalog-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  pointer-events: none;
+}
+
+.search-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.catalog-searchbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.my-catalog-section .input-text {
+  background-color: var(--black-color);
+  width: 150px;
+  height: 40px;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: solid var(--white-color) 1px;
+  color: var(--grey-color);
+}
+
+.year-select {
+  background-color: var(--black-color);
+  width: 65px;
+  height: 40px;
+  border-radius: 8px;
+  border: solid var(--white-color) 1px;
+  color: var(--grey-color);
+  font-size: 14px;
+  padding: 3px;
+  font-weight: 500;
+}
+
+.year-select option:checked {
+  color: var(--orange-color);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.catalog-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+}
+
+.catalog-sorry-message {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  padding: 48px 20px 40px 20px;
+  display: none;
+}
+
+.catalog-movie-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  margin-bottom: 20px;
+}
+
+.catalog-movie-list-item {
+  position: relative;
+  width: 280px;
+  height: 406px;
+  background-image: url('/img/image.png');
+  border-radius: 5px;
+}
+
+.catalog-movie {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #ffffff;
+}
+
+.catalog-movie-title {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.catalog-movie-genres {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: var(--grey-color);
+  font-weight: bold;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.arrow-button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+}
+
+.page-number-button {
+  background-color: var(--black-color);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: solid var(--grey-color) 1px;
+  color: var(--grey-color);
+  font-size: 14px;
+}
+
+.page-number-button:active {
+  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  color: var(--white-color);
+  font-weight: 400;
+  border: none;
+}
+
+.page-number-button-between {
+  background-color: var(--black-color);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  color: var(--grey-color);
+  font-size: 14px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 10px;
+  stroke: white;
+}
+.vector-icon-left {
+  position: relative;
+  left: 8px;
+  width: 5.63px;
+  height: 11.25px;
+}
+
+.vector-icon-right {
+  position: relative;
+  left: 8px;
+  width: 5.63px;
+  height: 11.25px;
+}
+
+.x-button {
+  position: relative;
+  left: 321px;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .star {
+    width: 10px;
+    height: 10px;
+  }
+
+  .search-section {
+    justify-content: center;
+    gap: 0 20px;
+  }
+
+  .search-form {
+    gap: 12px;
+  }
+
+  .catalog-searchbar {
+    gap: 16px;
+  }
+
+  .my-catalog-section .input-text {
+    width: 188px;
+    height: 44px;
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .year-select {
+    width: 95px;
+    height: 44px;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .catalog-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .catalog-sorry-message {
+    font-size: 24px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .catalog-movie-list {
+    padding-top: 36px;
+    margin-bottom: 44px;
+  }
+
+  .catalog-movie-list-item {
+    width: 224px;
+    height: 325px;
+    padding-bottom: 28px;
+  }
+
+  .catalog-movie {
+    left: 10px;
+  }
+
+  .catalog-movie-title {
+    font-size: 12px;
+  }
+
+  .catalog-movie-genres {
+    font-size: 12px;
+  }
+
+  .pagination-container {
+    margin-bottom: 60px;
+  }
+
+  .arrow-button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .page-number-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .page-number-button-between {
+    font-size: 14px;
+  }
+
+  .search-icon {
+    left: 14px;
+  }
+
+  .vector-icon-left {
+    width: 7.88px;
+    height: 15.75px;
+  }
+
+  .vector-icon-right {
+    width: 7.88px;
+    height: 15.75px;
+  }
+
+  .x-button {
+    left: 190px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .star {
+    width: 18px;
+    height: 18px;
+  }
+
+  .search-form {
+    gap: 20px;
+  }
+
+  .catalog-searchbar {
+    gap: 24px;
+  }
+
+  .my-catalog-section .input-text {
+    width: 315px;
+    height: 48px;
+  }
+
+  .year-select {
+    width: 95px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .year-select option:checked {
+    font-size: 24px;
+  }
+
+  .catalog-button {
+    width: 48px;
+    height: 48px;
+  }
+
+  .catalog-sorry-message {
+    font-size: 24px;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+
+  .catalog-movie-list {
+    gap: 32px 15px;
+    padding-top: 48px;
+    margin-bottom: 60px;
+  }
+
+  .catalog-movie-list-item {
+    width: 395px;
+    height: 574px;
+    padding-bottom: 32px;
+  }
+
+  .catalog-movie {
+    left: 20px;
+  }
+
+  .catalog-movie-title {
+    font-size: 20px;
+  }
+
+  .catalog-movie-genres {
+    font-size: 20px;
+  }
+
+  .pagination-container {
+    margin-bottom: 60px;
+  }
+
+  .arrow-button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .page-number-button {
+    width: 40px;
+    height: 40px;
+  }
+}

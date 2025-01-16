@@ -4,15 +4,105 @@
   | default @import url()
   |============================
 */
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
+@import url('./reset.css');
 @import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
+@import url('./hero.css');
+@import url('./weekly-cards.css');
 @import url('./footer.css');
+@import url('./library.css');
+@import url('./modal-window.css');
+@import url('./my-catalog.css');
+@import url('./modal-window.css');
+@import url('./upcoming-this-month.css');
+@import url('scroll-to-top.css');
+@import url('./loader.css');
+
+:root {
+  --orange-color: #f87719;
+  --black-color: #111111;
+  --black-secondary-color: #282828;
+  --grey-white-theme-color: #595959;
+  --grey-color: #b7b7b7;
+  --secondary-text: #f8f8f8;
+  --white-color: #ffffff;
+  --font-roboto: 'Roboto', sans-serif;
+  --gradient-button-1: linear-gradient(45deg, #f87719, #f89f19);
+  --gradient-button-2: linear-gradient(45deg, #f89f19, #f87719);
+  --loader-width: 5vmin;
+
+  font-family: var(--font-roboto);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  transition: background-color 1s, color 1s;
+}
+
+html[data-theme='dark'] {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+html[data-theme='light'] {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+html {
+  cursor: url('../img/cursor-arrow-2.png'), auto;
+}
+
+a,
+button,
+.header-nav-list,
+.mobile-nav-list,
+.footer-btn,
+.scroll-up-btn,
+.theme-switcher {
+  cursor: url('../img/cursor-pointer-2.png'), auto;
+}
+
+.is-closed {
+  display: none;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.container {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+.modal-btn-open {
+  display: none;
+}

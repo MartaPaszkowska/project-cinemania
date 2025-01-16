@@ -1,6 +1,6 @@
-const teamLink = document.getElementById('our-team-btn');
-const teamBackdrop = document.querySelector('.team');
-const teamCloseBtn = document.querySelector('.team-close-btn');
+const teamLink = document.getElementById('developed-btn');
+const teamBackdrop = document.querySelector('.developed');
+const teamCloseBtn = document.querySelector('.developed-close-btn');
 const bodyElement = document.querySelector('body');
 
 teamLink.addEventListener('click', onLinkClick);

@@ -27,6 +27,7 @@ export async function createMovieInfoMarkup(id) {
     const genreNames = movie.genres.map(genre => genre.name).join(' ');
 
     backdrop.innerHTML = `
+    <div class="modal-wrapper">
       <div class="modal-window">
         <button class="modal-btn-close" type="button">
           <svg width="30" height="30">   
@@ -80,6 +81,7 @@ export async function createMovieInfoMarkup(id) {
           <p class="modal-film-desc">${movie.overview}</p>
           <button id="library-actions-btn" type="submit"></button>
         </div>
+      </div>
       </div>
     `;
 
